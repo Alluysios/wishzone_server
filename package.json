@@ -1,0 +1,46 @@
+{
+  "name": "wishzona",
+  "version": "1.0.0",
+  "description": "Shopping products",
+  "main": "app.js",
+  "scripts": {
+    "start": "node server.js",
+    "client": "npm start --prefix client",
+    "server": "nodemon server.js",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+  },
+  "author": "Allu",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cloudinary": "^1.23.0",
+    "concurrently": "^5.3.0",
+    "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-mongo-sanitize": "^2.0.0",
+    "express-validator": "^6.6.1",
+    "helmet": "^4.1.1",
+    "hpp": "^0.2.3",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.10.7",
+    "multer": "^1.4.2",
+    "multer-storage-cloudinary": "^4.0.0",
+    "pg": "^8.4.1",
+    "sharp": "^0.26.1",
+    "slugify": "^1.4.5",
+    "stripe": "^8.109.0",
+    "uuid": "^8.3.1",
+    "xss-clean": "^0.1.1"
+  },
+  "devDependencies": {
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.4"
+  },
+  "engines": {
+    "node": "12.16.3"
+  }
+}
